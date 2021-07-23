@@ -16,7 +16,7 @@ export const Security = () => {
       </section>
       <section style={{ background: '#ECF2F6'}}  className="video1">
         <h2 className='text-center mb-5 azul'>GANADORES CAMPAÑA MEDIO AMBIENTE</h2>
-        <article className="briVideo" style={{ display: 'flex'}}>
+        <article className="briVideo" >
             <div>
             <Card style={{ backgroundColor:'transparent',borderColor:'transparent'}}>
                   {/* <Card.Text style={{fontWeight:'bold', color:'#874487', fontSize:'1.2rem', textAlign:'center' }} className="card-body"> */}

@@ -49,7 +49,7 @@
 .briVideo{
   object-fit: contain;
   align-items: center;
-  
+  align-content: center;
 
 } 
 .briVideo div{
