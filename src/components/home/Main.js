@@ -1,9 +1,11 @@
-import React from "react";
-import { Card } from "react-bootstrap";
+import React, { useState }from "react";
+import { Card , Modal, Button} from "react-bootstrap";
  
 
 export const Main = () => {
-
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <section className='p-5'>
@@ -17,7 +19,27 @@ export const Main = () => {
               <Card.Text style={{ color: '#003366', fontWeight:'bold', textAlign:'center' }}>
                 Cronograma de capacitación
               </Card.Text>
-              <div><button className="briCardBtn"> Conoce más <i class="fas fa-arrow-circle-right"></i></button></div>
+              <div><button className="briCardBtn" onClick={handleShow}> Conoce más <i class="fas fa-arrow-circle-right"></i></button>
+              <Modal
+                  show={show}
+                  onHide={handleClose}
+                  backdrop="static"
+                  keyboard={false}
+                >
+                  <Modal.Body >
+                    I will not close if you click outside me. Don't even try to press
+                    escape key.
+                    <div>
+                      <figure className='mx-auto'>
+
+                      </figure>
+                    </div>
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>Close</Button>
+                  </Modal.Footer>
+                </Modal>
+        </div>
             </Card.Body>
           </Card>
           <Card border="gris3 border-3" style={{ width: '14rem', borderRadius:'17px', height:'13rem' }} className='mb-4'>
@@ -30,7 +52,22 @@ export const Main = () => {
               <Card.Text style={{ color: '#003366', fontWeight:'bold', textAlign:'center' }}>
                 Convocatorias internas
               </Card.Text>
-                <div><button className="briCardBtn" /* style={{color:'#FFCC00', fontWeight:'bold', background:'white', borderColor:'transparent'}} */> Conoce más <i class="fas fa-arrow-circle-right"></i></button></div>
+                <div><button className="briCardBtn" onClick={handleShow}/* style={{color:'#FFCC00', fontWeight:'bold', background:'white', borderColor:'transparent'}} */> Conoce más <i class="fas fa-arrow-circle-right"></i></button>
+                <Modal
+                  show={show}
+                  onHide={handleClose}
+                  backdrop="static"
+                  keyboard={false}
+                >
+                  <Modal.Body >
+                    I will not close if you click outside me. Don't even try to press
+                    escape key.
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>Close</Button>
+                  </Modal.Footer>
+                </Modal>
+                </div>
             </Card.Body>
           </Card>
           <Card border="gris3 border-3" style={{ width: '14rem', borderRadius:'17px', height:'13rem' }} className='mb-4'>
@@ -43,7 +80,21 @@ export const Main = () => {
               <Card.Text style={{ color: '#003366', fontWeight:'bold', textAlign:'center' }}>
                 Beneficios
               </Card.Text>
-                <div><button className="briCardBtn"> Conoce más <i className="fas fa-arrow-circle-right"></i></button></div>
+                <div><button className="briCardBtn" onClick={handleShow}> Conoce más <i className="fas fa-arrow-circle-right"></i></button>
+                <Modal
+                  show={show}
+                  onHide={handleClose}
+                  backdrop="static"
+                  keyboard={false}
+                >
+                  <Modal.Body >
+                    I will not close if you click outside me. Don't even try to press
+                    escape key.
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>Close</Button>
+                  </Modal.Footer>
+                </Modal></div>
             </Card.Body>
           </Card>
           <Card border="gris3 border-3" style={{ width: '14rem', borderRadius:'17px', height:'13rem' }} className='mb-4'>
@@ -56,7 +107,21 @@ export const Main = () => {
               <Card.Text style={{ color: '#003366', fontWeight:'bold', textAlign:'center'}}>
                 Actividad
               </Card.Text>
-              <div><button className="briCardBtn"> Conoce más <i className="fas fa-arrow-circle-right"></i></button></div>
+              <div><button className="briCardBtn" onClick={handleShow}> Conoce más <i className="fas fa-arrow-circle-right"></i></button>
+              <Modal
+                  show={show}
+                  onHide={handleClose}
+                  backdrop="static"
+                  keyboard={false}
+                >
+                  <Modal.Body >
+                    I will not close if you click outside me. Don't even try to press
+                    escape key.
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>Close</Button>
+                  </Modal.Footer>
+                </Modal></div>
             </Card.Body>
           </Card>         
         </article>
